@@ -1,0 +1,13 @@
+# Manual process to connect with Node server from Ansible Server
+# ansible all -i <private ip of Node>, -e ansible_user=<UserName> -e ansible_password=<password> -m ping
+# ansible all -i 172.31.34.253, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+# ansible all -i 172.31.34.253, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
+# -i = Inventory
+# -m = Module
+# -b = become root
+
+- name: ping playbook
+  host: web
+  tasks: # it is equivalent to module, collection
+    - name: ping the server
+      ansible.builtin.ping:
