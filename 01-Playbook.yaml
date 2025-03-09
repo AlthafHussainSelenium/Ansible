@@ -6,7 +6,7 @@
 # -m = Module
 # -b = become root
 
-- name: ping playbook
+- name: PING
   host: web
   tasks: # it is equivalent to module, collection
     - name: ping the server
