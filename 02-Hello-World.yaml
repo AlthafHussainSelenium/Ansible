@@ -1,6 +1,6 @@
 - name: Hello Playbook
   hosts: web
   tasks:
-    - name: Print
-      ansible.builtin.debug: null
-      msg: Hellow world
+  - name: Print
+    ansible.builtin.debug: null
+    msg: Hellow world
