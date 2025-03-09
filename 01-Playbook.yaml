@@ -7,7 +7,7 @@
 # -b = become root
 
 - name: PING
-  host: web
+  hosts: web
   tasks: # it is equivalent to module, collection
     - name: ping the server
       ansible.builtin.ping:
